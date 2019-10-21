@@ -5,7 +5,7 @@ application of a lowpass filter). The resulting low-frequency patterns (LFPs) an
 isolate low-frequency climate variability and are useful in diagnosing the corresponding mechanisms. This method is 
 presented in Wills et al. (2018, GRL). 
 
-Here, we provide an example LFCA script in Matlab and Python. The scripts run_lfca_example.m or run_lfca_example.py run an example that creates Fig. 4 of the associated paper (Wills et al. 2018). By changing the value of truncation in the script to 3, the script will create Fig. 1 of this paper instead. The method is contained within lfca.m. 
+Here, we provide an example LFCA script in Matlab and Python. The scripts run_lfca_example.m or run_lfca_example.py run an example that creates Fig. 4 of the associated paper (Wills et al. 2018). By changing the value of truncation in the script to 3, the script will create Fig. 1 of this paper instead. The method is contained within lfca.m or the function lfca within signal_processing.py. 
 
 Reference for Method:
 Wills, R.C., T. Schneider, J.M. Wallace, D.S. Battisti, and D.L. Hartmann, 2018: Disentangling global warming, multidecadal variability, and El Niño in Pacific temperatures. Geophysical Research Letters, 45, doi:10.1002/2017GL076327. [PDF] [SI] [Official version]
