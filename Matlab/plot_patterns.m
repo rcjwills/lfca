@@ -19,7 +19,7 @@ if nargin > 5
     switch option
         case 'Pacific'
             set(gca,'xlim',[100 295]); set(gca,'ylim',[-44 70])
-            set(gca,'xtick',120:30:270); set(gca,'xticklabel',{'120°E','','180°','','120°W',''});
+            set(gca,'xtick',120:30:270); set(gca,'xticklabel',{'120Â°E','','180Â°','','120Â°W',''});
         case 'Atlantic'
             set(gca,'ylim',[-45 86]); set(gca,'xlim',[-80 80])
     end
