@@ -34,6 +34,7 @@ domain(X>270 & Y<=17 & Y>14) = 0;
 domain(X>276 & Y<=14 & Y>9) = 0;
 domain(X>290 & Y<=9) = 0;
 
+% Note: X is changing uses from this point forward. Was longitude array, now is data array.
 X = reshape(SST_anomalies,s(1)*s(2),s(3))';
 AREA_WEIGHTS = reshape(area,s(1)*s(2),1)';
 domain = reshape(domain,s(1)*s(2),1)';
