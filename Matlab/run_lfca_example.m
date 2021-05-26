@@ -34,15 +34,14 @@ domain(X>270 & Y<=17 & Y>14) = 0;
 domain(X>276 & Y<=14 & Y>9) = 0;
 domain(X>290 & Y<=9) = 0;
 
-% Note: X is changing uses from this point forward. Was longitude array, now is data array.
-X = reshape(SST_anomalies,s(1)*s(2),s(3))';
+xtf = reshape(SST_anomalies,s(1)*s(2),s(3))';
 AREA_WEIGHTS = reshape(area,s(1)*s(2),1)';
 domain = reshape(domain,s(1)*s(2),1)';
 
 % icol_ret and icol_disc help reconstruct the data onto the original grid
 icol_ret = find(AREA_WEIGHTS~=0 & domain);
 icol_disc = find(AREA_WEIGHTS==0 | ~domain);
-X = X(:,icol_ret);
+xtf = xtf(:,icol_ret);
 AREA_WEIGHTS = AREA_WEIGHTS(icol_ret);
 
 % scale by square root of grid cell area such that covariance is area
@@ -51,7 +50,7 @@ normvec          = AREA_WEIGHTS' ./ sum(AREA_WEIGHTS);
 scale    = sqrt(normvec);
 
 %% Low-frequency component analysis (LFCA)
-[LFCs, LFPs, weights, r, pvar, PCs, EOFs, N, pvar_slow, pvar_lfc, r_eofs, pvar_slow_eofs] = lfca(X, cutoff, truncation, scale);
+[LFCs, LFPs, weights, r, pvar, PCs, EOFs, N, pvar_slow, pvar_lfc, r_eofs, pvar_slow_eofs] = lfca(xtf, cutoff, truncation, scale);
 LFPs       = insert_cols(LFPs, icol_ret, icol_disc);
 EOFs       = insert_cols(EOFs, icol_ret, icol_disc);
 weightsf        = insert_rows(weights, icol_ret, icol_disc);

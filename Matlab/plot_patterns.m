@@ -6,10 +6,16 @@ end
 
 s(1) = length(lon);
 s(2) = length(lat);
-    
+
 pattern = reshape(patternsf(ndisc,:),s(1),s(2));
 
 pattern(abs(pattern)>1e5) = nan;
+
+if strcmp(option,'Atlantic') && min(lon)>=0
+    nlon = size(pattern,1);
+    pattern = [pattern(nlon/2+1:end,:); pattern(1:nlon/2,:)];
+    lon = [lon(nlon/2+1:end)-360; lon(1:nlon/2)];
+end
 
 if nargin > 5
     if ~strcmp(option,'split')
@@ -19,9 +25,9 @@ if nargin > 5
     switch option
         case 'Pacific'
             set(gca,'xlim',[100 295]); set(gca,'ylim',[-44 70])
-            set(gca,'xtick',120:30:270); set(gca,'xticklabel',{'120Â°E','','180Â°','','120Â°W',''});
+            set(gca,'xtick',120:30:270); set(gca,'xticklabel',{'120°E','','180°','','120°W',''});
         case 'Atlantic'
-            set(gca,'ylim',[-45 86]); set(gca,'xlim',[-80 80])
+            set(gca,'ylim',[0 70]); set(gca,'xlim',[-100 45])
     end
     colorbar off; originalSize = get(gca, 'Position'); hc = colorbar('eastoutside'); 
     if max(ctrs)==0.2
