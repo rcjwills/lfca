@@ -11,9 +11,9 @@ Reference for Method:
 Wills, R.C., T. Schneider, J.M. Wallace, D.S. Battisti, and D.L. Hartmann, 2018: Disentangling global warming, multidecadal variability, and El Niño in Pacific temperatures. Geophysical Research Letters, 45, doi:10.1002/2017GL076327.
 
 The data file for the example includes data from the NOAA Extended Reconstructed Sea-Surface 
-Temperature data set (Smith et al. 2008) and can be downloaded here: atmos.uw.edu/~rcwills/data/ERSST_1900_2016.mat. All use of this data should reference the appropriate publication:
+Temperature data set (Smith et al. 2008) and can be downloaded here: https://atmos.uw.edu/~rcwills/data/ERSST_1900_2016.mat. All use of this data should reference the appropriate publication:
 
 Smith, T.M., R.W. Reynolds, T.C. Peterson, and J. Lawrimore, 2008: Improvements to NOAA’s historical merged land–ocean surface temperature analysis (1880–2006). Journal of Climate, 21 (10), 2283–2296.
 
-The data file for the bivariate example includes data from the AVISO monthly-mean sea-surface height anomaly data set (https://www.aviso.altimetry.fr/en/index.php?id=1526) and can be downloaded here: atmos.uw.edu/~rcwills/data/AVISO_1993_2016.mat. All use of this data should use the citation: "This product was processed by SSALTO/DUACS and distributed by AVISO+ (https://www.aviso.altimetry.fr) with support from CNES”
+The data file for the bivariate example includes data from the AVISO monthly-mean sea-surface height anomaly data set (https://www.aviso.altimetry.fr/en/index.php?id=1526) and can be downloaded here: https://atmos.uw.edu/~rcwills/data/AVISO_1993_2016.mat. All use of this data should use the citation: "This product was processed by SSALTO/DUACS and distributed by AVISO+ (https://www.aviso.altimetry.fr) with support from CNES”
 
